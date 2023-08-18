@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 
 const awsConfig = {
-  region: 'us-east-1',
+  region: 'us-west-1',
   credentials: {
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
