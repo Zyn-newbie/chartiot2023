@@ -2,8 +2,7 @@ const express = require('express');
 const { DynamoDBClient, ScanCommand } = require('@aws-sdk/client-dynamodb');
 const dotenv = require('dotenv');
 
-dotenv.config();
-
+dotenv.config({ path: ".env"});
 const app = express();
 const port = 3000;
 
