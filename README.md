@@ -3,7 +3,7 @@ Dashboard from IoT Device, you must be set from the database NoSQL.
 
 # Application
 ## Install Dependencies
-`npm install --prefix`
+`npm install`
 
 # Envinronment Variable
 Setting the environment variable on your path application, use the name .env, and set the variable name on the instruction below:<br/>
