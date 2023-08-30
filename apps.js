@@ -20,6 +20,7 @@ const dynamoDBClient = new DynamoDBClient(awsConfig);
 const tableName = 'sensor';
 
 app.get('/', async (req, res) => {
+  const serverIpv4 = req.connection.localAddress;
   if (!awsConfig.credentials.accessKeyId || !awsConfig.credentials.secretAccessKey) {
     res.send('Missing AWS credentials. Please configure accessKeyId and secretAccessKey.');
   } else {
@@ -78,6 +79,7 @@ app.get('/', async (req, res) => {
           
           <div class="container mt-1">
           <h2 style="text-align:center"> IoT Monitoring </h2>
+          <h4 style="text-align:center">Server IP Address: ${serverIpv4}</h4>
             <div class="row">
               <div class="col-md-6">
                 <div id="humidity-chart" class="p-3"></div>
@@ -142,8 +144,8 @@ app.get('/', async (req, res) => {
               }
             };
             var humidityIndicatorLayout = {
-              width: 550,
-              height: 400
+              width: 400,
+              height: 350
             };
 
             Plotly.newPlot('humidity-chart', [humidityIndicator], humidityIndicatorLayout);
@@ -169,8 +171,8 @@ app.get('/', async (req, res) => {
             };
 
             var temperatureIndicatorLayout = {
-              width: 550,
-              height: 400
+              width: 400,
+              height: 350
             };
 
             Plotly.newPlot('temperature-chart', [temperatureIndicator], temperatureIndicatorLayout);
