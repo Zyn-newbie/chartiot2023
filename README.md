@@ -2,6 +2,9 @@
 Dashboard from IoT Device, you must be set from the database NoSQL.
 
 # Application
+## Install nodejs
+`curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -`<br/>
+`sudo yum install -y nodejs`
 ## Install Dependencies
 `npm install`
 
